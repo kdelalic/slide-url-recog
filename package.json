@@ -1,0 +1,41 @@
+{
+  "name": "slide-url-recog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "tsc": "tsc",
+    "build": "npm-run-all clean lint tsc",
+    "dev:start": "npm-run-all build start",
+    "dev": "nodemon --watch src -e ts --exec npm run dev:start",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdelalic/slide-url-recog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdelalic/slide-url-recog/issues"
+  },
+  "homepage": "https://github.com/kdelalic/slide-url-recog#readme",
+  "dependencies": {
+    "@azure/cognitiveservices-computervision": "^7.0.1",
+    "@types/busboy": "^0.2.3",
+    "@types/express": "^4.17.7",
+    "busboy": "^0.3.1",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "tslint": "^6.1.3"
+  }
+}
