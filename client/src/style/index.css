@@ -1,0 +1,192 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../assets/fonts/OpenSans-Regular.ttf') format('ttf');
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+span {
+	font-size: 16px;
+}
+
+#app {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.buttons {
+	display: inline-flex;
+	margin: 10px 0;
+}
+
+.button {
+	background-color: #6772e5;
+	color: white;
+	text-decoration: none;
+	display: inline-flex;
+	border-radius: 4px;
+	font-size: 15px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+	margin: 5px 5px;
+	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+	transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+}
+
+.button:hover {
+	background-color: #7795f8;
+	box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.button-icon {
+	width: 25px;
+	margin-right: 5px;
+}
+
+.result {
+	padding: 25px;
+}
+
+.result .screenshot {
+	width: 250px;
+	-webkit-box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.75);
+	cursor: pointer;
+	transition: .1s ease;
+	margin: auto;
+}
+
+.result ul, .history-entry ul {
+	padding: 0;
+}
+
+.result li, .history-entry li {
+	list-style-type: none;
+	text-align: start;
+}
+
+.result-url {
+	font-size: 16px;
+}
+
+header {
+	background: #6772e5;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 5px;
+	width: 100%;
+}
+
+.brand {
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+}
+
+nav {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	margin: auto;
+	color: white;
+}
+
+nav a {
+	margin: auto 5px;
+	color: white;
+	display: inline-block;
+	padding: 6px 16px;
+	border-radius: 16.5px;
+	white-space: nowrap;
+	outline: none;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+nav a.active, nav a:hover {
+	background-color: #7795f8;
+}
+
+.options .content {
+	width: 800px;
+	margin: auto;
+	padding: 25px;
+	text-align: center;
+}
+
+.history-entry {
+	display: flex;
+	flex-direction: row;
+	padding: 25px;
+}
+
+.history-entry:not(:last-of-type) {
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.history-entry .screenshot {
+	width: 250px;
+	cursor: pointer;
+	display: flex;
+	transition: .1s ease;
+	margin: 0 50px;
+	-webkit-box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.75);
+}
+
+.history-entry ul {
+	margin: 0;
+}
+
+.history-entry>* {
+	align-self: center;
+}
+
+.screenshot:hover {
+	opacity: 0.75;
+	transition: .1s ease;
+}
+
+.history-entry .timestamp {
+	width: 100px;
+	text-align: center;
+}
+
+.no-url, .loading, .error {
+	display: block;
+	margin-top: 20px;
+}
+
+.no-history {
+	text-align: center;
+}
+
+.settings {
+	display: flex;
+	justify-content: center;
+}
+
+.settings span {
+	margin-left: 15px;
+}

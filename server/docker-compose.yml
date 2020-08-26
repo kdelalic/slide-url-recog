@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  slide-url-recog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: slide-url-recog
+    container_name: slide-url-recog
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - COMPUTER_VISION_SUBSCRIPTION_KEY=$COMPUTER_VISION_SUBSCRIPTION_KEY
+      - COMPUTER_VISION_ENDPOINT=$COMPUTER_VISION_ENDPOINT
+    ports:
+      - "80:8080"
+    volumes:
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+    networks:
+      - app-network
+    command: node .
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  node_modules:  

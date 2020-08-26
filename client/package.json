@@ -1,0 +1,33 @@
+{
+  "name": "preact-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -c webpack.config.js --mode production",
+    "dev": "webpack -c webpack.config.js --mode development -w"
+  },
+  "author": "Karlo Delalic",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "axios": "^0.20.0",
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "preact": "^10.4.7",
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-extension-reloader": "^1.1.4"
+  }
+}
