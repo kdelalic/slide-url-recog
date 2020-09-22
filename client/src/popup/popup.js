@@ -3,6 +3,7 @@ import axios from 'axios';
 import Result from "./result";
 import CameraIcon from "../assets/camera-solid.svg";
 import HistoryIcon from "../assets/history-solid.svg";
+import { BASE_SERVER_URL } from '../util/config';
 
 const dataURItoBlob = (dataURI) => {
 	// convert base64 to raw binary data held in a string
@@ -59,7 +60,7 @@ export default class Popup extends Component {
 					error: false
 				});
 
-				axios.post('http://165.22.239.68:8080/ocr', formData)
+				axios.post(`${BASE_SERVER_URL}/ocr`, formData)
 					.then((response) => {
 						const urls = response.data;
 

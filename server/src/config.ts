@@ -1,3 +1,9 @@
+
+import dotenv from 'dotenv';
+
+// Load .env variables
+dotenv.config()
+
 export class Config {
   // Production check
   public static DEVELOPMENT_MODE: boolean = process.env.NODE_ENV !== 'production';

@@ -7,11 +7,9 @@
     "browser_action": {
         "default_popup": "popup.html"
     },
-    "content_security_policy": "script-src 'self'; object-src 'self'; font-src 'self'; default-src 'self'; style-src 'nonce-0492830985' 'self'; img-src 'self' data:; connect-src http://localhost:8080 http://165.22.239.68:8080 ws://localhost:*/; frame-src 'self' data:",
+    "content_security_policy": "script-src 'self'; object-src 'self'; font-src 'self'; default-src 'self'; style-src 'nonce-12402934' 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'self' data:",
     "permissions": [
-        "activeTab",
-        "http://localhost:8080/*",
-        "http://165.22.239.68:8080/*"
+        "activeTab"
     ],
     "icons": {
         "16": "assets/icons/icon16.png",
